@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/details_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/mycolor"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways|snap" />    <!--让Toolbar单独使用深色主题 字和菜单用淡色-->
+
+        </android.support.design.widget.AppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <EditText
+        android:layout_height="0dp"
+        android:layout_width="0dp"/>
+
+    <LinearLayout
+        app:layout_widthPercent="80%"
+        app:layout_marginTopPercent="20%"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:text="Title :" />
+
+        <EditText
+            android:id="@+id/details_edit_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:singleLine="true"
+            android:paddingRight="10dp"
+            android:textColor="@color/colorfont"
+            android:paddingLeft="5dp"
+            android:background="@drawable/edittext_background"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_marginTopPercent="30%"
+        app:layout_widthPercent="75%"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/details_txt_showdate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center" />
+        <CheckBox
+            android:id="@+id/details_check_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyCheckBox"
+            android:textColor="#555555"
+            android:text="设置提醒" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_marginTopPercent="40%"
+        app:layout_widthPercent="80%"
+        app:layout_heightPercent="35%"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="content:" />
+
+        <EditText
+            android:id="@+id/details_edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/colorfont"
+            android:gravity="top"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_marginTopPercent="75%"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/details_txt_showday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        app:layout_marginTopPercent="90%"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/details_btn_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_style"
+            android:text="确定"/>
+
+        <Button
+            android:id="@+id/details_btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="right"
+            android:background="@drawable/btn_style"
+            android:text="修改"/>
+
+        <Button
+            android:id="@+id/details_btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="right"
+            android:background="@drawable/btn_style"
+            android:text="删除" />
+
+    </LinearLayout>
+
+</android.support.percent.PercentFrameLayout>
+
+

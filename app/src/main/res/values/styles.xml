@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:listDivider">@drawable/divider</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/mycolor</item>
+        <item name="colorControlActivated">@color/mycolor</item>
+    </style>
+
+    <style name="MyStyleOne" parent="@style/ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">@color/mycolor2</item>
+        <item name="overlapAnchor">false</item>  <!--设置不覆盖锚点-->
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyTheme" parent="AppTheme">
+    </style>
+
+</resources>

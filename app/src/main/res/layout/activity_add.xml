@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/add_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/mycolor"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways|snap" />    <!--让Toolbar单独使用深色主题 字和菜单用淡色-->
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_fab_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="40dp"
+            android:src="@drawable/ic_done" />    <!--悬浮按钮-->
+        <!--android:elevation="2dp"投影高度-->
+    </android.support.design.widget.CoordinatorLayout>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        app:layout_widthPercent="80%"
+        app:layout_marginTopPercent="20%"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:text="Title :" />
+
+        <EditText
+            android:id="@+id/add_edit_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:background="@drawable/edittext_background"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_marginTopPercent="30%"
+        app:layout_widthPercent="75%"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/add_btn_choosedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_style"
+            android:text="选择日期"/>
+
+        <TextView
+            android:id="@+id/add_txt_showdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_marginTopPercent="40%"
+        app:layout_widthPercent="80%"
+        app:layout_heightPercent="40%"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <CheckBox
+            android:id="@+id/add_check_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyCheckBox"
+            android:textColor="#555555"
+            android:text="设置提醒" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="content:" />
+
+        <EditText
+            android:id="@+id/add_edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/edittext_background"
+
+            android:gravity="top"/>
+
+    </LinearLayout>
+
+</android.support.percent.PercentFrameLayout>
