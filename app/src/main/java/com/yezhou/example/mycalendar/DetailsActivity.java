@@ -242,7 +242,8 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         dialog.show();
     }
 
-    private String calculatingDateDifference(String date1, String date2) {    // date1 当前时间 date2 设定时间
+
+    public String calculatingDateDifference(String date1, String date2) {    // date1 当前时间 date2 设定时间
 
         String[] a = date1.split("-");
         String[] b = date2.split("-");
@@ -272,7 +273,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                             timeDistance += 365;
                         }
                     }
-                    return "距今已过去" + (timeDistance + day2 - day1) + "天";
+                    return "距今已过去" + (timeDistance + (day1 - day2)) + "天";    // 把年加到相同(计算一年天数*年数) + 一年中两天的差值
                 }
             } else if (year2 > year1) {
                 int timeDistance = 0;
@@ -303,7 +304,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         return "我已经被判断日期绕晕了";
     }
 
-    private int calculatingDays(int y, int m, int d) {    // 返回dayofyear
+    public int calculatingDays(int y, int m, int d) {    // 返回dayofyear
         m = m-1;
         int dayOfYear = 0;
         switch (m) {    // 利用case选择 累加
@@ -339,6 +340,8 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         }
         return dayOfYear + d;
     }
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
